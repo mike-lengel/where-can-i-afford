@@ -8,6 +8,7 @@ import sqlite3
 from math import cos, asin, sqrt, pi
 
 
+
 def getMoreDetails(listingLink):
     thisFile = urllib.request.urlopen(listingLink).read()
     thisSoup = BeautifulSoup(thisFile,features='html.parser')
@@ -123,7 +124,7 @@ def getListingsWithinDistance(lat,long,distance,db):
 
 
 urlTestBase = "https://philadelphia.craigslist.org"
-urlTestSearch = "/search/apa?"
+urlTestSearch = "/search/apa?availabilityMode=0&query=malvern+pa&sale_date=all+dates"
 #urlTestSearch = "/search/apa?availabilityMode=0&query=malvern+pa&sale_date=all+dates"
 listingInfo = []
 testDB = "Listings.db"
